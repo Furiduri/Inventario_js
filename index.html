@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inventario</title>
+    <!-- Bostrap Estilo SuperHero, bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/costom.css">
+    <!-- JS Main -->
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button onclick="collapse_show();" id="btMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarColor">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Aplicaccion -->
+        <div id="App" class="row pt-5">
+            <!-- Formulario de ingreso de Articulos -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Agregar Producto</h4>
+                    </div>
+                    <form id="product-from" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Nombre de Producto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="marca" placeholder="Marca" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="code" placeholder="Codigo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend mb-2">
+                                    <span class="input-group-text">$</span><input type="number" id="precio" placeholder="Precio" class="form-control" step="0.01">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="stock" placeholder="Stock" class="from-control mb-1">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                    </form>
+                </div>
+            </div>
+            <div id="product-list" class="col-md-8">
+
+            </div>
+        </div>
+    </div>
+    <!-- App JS -->
+    <script src="/app.js"></script>
+</body>
+
+</html>
